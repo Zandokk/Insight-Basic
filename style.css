@@ -366,8 +366,58 @@ color: var(--light);
   background-color: var(--dark);
   transition: 0.5s ease;
 }
-.projects .projects__card:hover .projects__text{
+.projects .projects__card:hover .projects__text {
   display: block;
+}
+@media screen and (max-width:500px) {
+  .projects .projects__wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 5rem;
+  }
+  .projects .projects__card::before {
+    content:"";
+    width: 0%;
+    height: 0%;
+  }
+  .projects .projects__text {
+    display: block;
+  }
+}
+/* FOOTER */
+.footer{
+  background: var(--dark);
+}
+.footer .footer__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  color: var(--light);  
+}
+.footer .footer__social{
+  display: flex;
+  flex-direction: raw;
+  gap: 5rem
+}
+.footer .footer__social a{
+  color: var(--light);
+}
+@media screen and (max-width:500px) {
+  .footer .footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .footer .footer__wrapper img {
+    display: flex;
+    order: -1;
+  }
+}
+.footer .footer__social{
+  gap: 4rem;
 }
 /* REPEATABLE PATTERNS */
 :root {
